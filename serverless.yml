@@ -1,4 +1,4 @@
-service: <+service.name>
+service: Serverless-demo
 
 provider:
   name: aws
