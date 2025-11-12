@@ -1,0 +1,16 @@
+service: <+service.name>
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-2
+  deploymentBucket:
+    name: cd-terraform-state-demo
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
